@@ -1,3 +1,17 @@
+figure {
+	display: table;
+}
+figure figcaption {
+	display: table-caption;
+	caption-side: bottom;
+}
+
+.fig- {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+@media (min-width: 600px)  {
 .fig-right {
 	float: right;
 	margin-right: 0 !important;
@@ -6,9 +20,6 @@
 	float: left;
 	margin-left: 0 !important;
 }
-.fig- {
-	margin-left: 0 !important;
-	margin-right: 0 !important;
 }
 
 figure{
