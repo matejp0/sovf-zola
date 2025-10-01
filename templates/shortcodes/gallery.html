@@ -1,0 +1,10 @@
+<div class="gallery">
+{% for asset in page.assets | sort-%}
+{%- if asset is matching("[.](jpg|png)$") and asset is containing("gallery/" ~ num ~ "/") -%}
+    {% set image = resize_image(path=asset, width=250, height=250) %}
+    {% set caption =  asset | split(pat="/") | last | split(pat=".") | first %}
+    <div class="gallery-item"><a title="{{ caption }}" href="{{ get_url(path=asset) }}" data-lightbox="mygallery" data-title="{{ caption }}"><img class="img-rounded gallery-image" src="{{ image.url }}" alt="{{ caption }}"/></a>
+    </div>
+  {%- endif %}
+{%- endfor %}
+</div>

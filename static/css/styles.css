@@ -1,0 +1,125 @@
+.fig-right {
+	float: right;
+	margin-right: 0 !important;
+}
+.fig-left {
+	float: left;
+	margin-left: 0 !important;
+}
+.fig- {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+figure{
+	margin-top: 0 !important;
+}
+
+.img-rounded {
+	border-radius: 10px;
+}
+
+article{
+	overflow: hidden;
+}
+article:after {
+	clear: both;
+}
+
+.content-serif {
+	font-family: "Palatino", Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
+}
+
+.has-text-blue {
+	color: #003399;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 5.7rem;    /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5.7rem;            /* Footer height */
+}
+
+a {
+	text-decoration: underline dotted;
+}
+a:hover{
+	color: #003399;
+	text-decoration: underline;
+}
+
+nav a, a.no-underline {
+	text-decoration: none;
+}
+nav a:hover, a.no-underline:hover {
+	text-decoration: none;
+}
+
+#sloupce .container {
+  float: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  max-width: 650px;
+}
+
+/**********GALLERY**********/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	gap: 10px;
+	box-sizing: border-box !important;
+}
+
+.gallery-item {
+}
+.gallery-item:hover {
+}
+.gallery-image {
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+.content-serif>p:first-of-type:first-letter {
+     font-size: 4rem; /* (x*2) rem -> x řádků */
+     margin-right: 0.1rem;
+     float: left;
+} 
+
+
+.footnote-definition p {
+	display: inline;
+}
+
+.footnote-definition {
+	font-size: 0.9rem;
+	margin-bottom: 8px;
+}
+.footnote-definition-label::before {
+	content: "[";
+}
+.footnote-definition-label::after {
+	content: "]";
+}
+.footnote-definition-label {
+	color: #003399;
+	vertical-align: initial;
+	font-size: 100% !important;
+}
+.footnote-reference a::before {
+	content: "[";
+}
+
+.footnote-reference a::after {
+	content: "]";
+}

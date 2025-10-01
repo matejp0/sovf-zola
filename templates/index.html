@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="has-text-centered">
+      <h1 class="title is-2">{{ section.title }}</h1>
+      <p class="subtitle is-4">{{ section.description | safe }}</p>
+      
+    <div class="has-text-left">
+      <div style="display: flex; flex-flow: row wrap; justify-content: center; gap: 2rem; align-items: center; margin: 2rem auto;">
+      <p style="font-size: 19px; flex-grow: 2; max-width: 37ch;">Občas můžete zahlédnout členy této čestné jednotky oldskautů. Mají na levém rukávě látkový znak, který znázorňuje bílý štít, v němž je umístěn modrý meč a červená javorová nažka. Znak má svou symboliku a vznikl již v roce 1949 v komunistickém trestním táboře Rovnost na Jáchymovsku, kde byli mnozí skauti vězněni a nuceni otrocky pracovat v uranových dolech. I zde je spojovalo skautské bratrství a společné ideály.</p>
+
+       <a src="/img/znak-sovf.png"><img src="{{ config.extra.logo }}" title="Oddílový znak SOVF" alt="Znak Skautského oddílu Velena Fanderlika (SOVF)" style="flex-grow: 1; max-width: 252px"  style="float: left"></a>
+
+    <div class="has-text-right">
+      <div style="display: flex; flex-flow: row wrap; justify-content: center; gap: 2rem; align-items: center; margin: 2rem auto;">
+      <p style="font-size: 17px; flex-grow: 2; max-width: 38ch;"><i>&raquo;Náš počet členů neubývá. Je to zásluhou Stanov, že máme členy „živé i mrtvé“. To znamená, že evidujeme jako členy i ty, kdo odešli do boží blízkosti. Hodí se nám to velice, máme tak přátele a pomocníky na nejvýznačnějších místech. Když uvádíme takovýto důvod existence oddílu, tak tvoříme jednu skautskou rodinu, která vděčně vzpomíná. <b>Povinnost – odpovědnost – kázeň – zákon a slib</b> – to jsou naše připomínky i do budoucnosti. Sloužím!&laquo;</i> <br>Eduard Marek – Hroznýš, Almanach SOVF 2018</p>
+
+      </div>
+    </div>
+    <div class="content">
+      {{ section.content | safe }}
+    </div>
+  </div>
+</section>
+{% endblock %}

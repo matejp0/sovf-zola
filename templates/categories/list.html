@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="has-text-centered">
+      <h1 class="title is-2">
+        <span class="icon">
+          <i class="fas fa-cubes"></i>
+        </span>
+        &nbsp;Rubriky
+      </h1>
+      <p class='subtitle is-4'>{{ terms | length }} celkem</p>
+      <p>
+        {% for category in terms %}
+        <div style="display: inline-block;"><a href="{{ get_taxonomy_url(kind='categories', name=category.name) }}" class="mr-4">
+          <span class="icon">
+            <i class="fas fa-cube"></i>
+          </span>
+          <span>{{category.name}} <small>[<b>{{ category.pages | length }}</b>]</small></span>
+        </a></div>
+        {% endfor %}
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock content %}

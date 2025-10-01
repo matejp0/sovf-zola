@@ -1,0 +1,14 @@
+<FilesMatch "\.(ico|jpg|jpeg|png|gif)$">
+Header set Cache-Control "max-age=315360000, public"
+# 10 let
+</FilesMatch>
+
+<FilesMatch "\.(css|js)$">
+Header set Cache-Control "max-age=172800, public"
+# 2 dny
+</FilesMatch>
+
+<FilesMatch "\.(html)$">
+Header set Cache-Control "max-age=60, public"
+# 1 minuta
+</FilesMatch>

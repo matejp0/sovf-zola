@@ -1,0 +1,55 @@
+base_url = "https://sovf.cz"
+title = "Skautský oddíl Velena Fanderlika"
+
+theme = "DeepThought"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+default_language = "en"
+
+
+taxonomies = [
+    { name = "categories", feed = true, paginate_by = 10 },
+    { name = "tags", fees = true, paginate_by = 10 },
+    { name = "authors", fees = true, paginate_by = 10 },
+]
+
+[search]
+# Whether to include the title of the page/section in the index
+include_title = true
+# Whether to include the description of the page/section in the index
+include_description = true
+# Whether to include the path of the page/section in the index
+include_path = false
+# Whether to include the rendered content of the page/section in the index
+include_content = true
+
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+bottom_footnotes = true
+
+
+[extra]
+navbar_items = [
+ { code = "en", nav_items = [
+  { url = "$BASE_URL/zapisnik", name = "Zápisník" },
+  { url = "$BASE_URL/clanky", name = "Články" },
+  { url = "$BASE_URL/nazory", name = "Názory" },
+  { url = "$BASE_URL/categories", name = "Rubriky" },
+  { url = "$BASE_URL/authors", name = "Autoři" },
+  { url = "$BASE_URL/kontakt", name = "Kontakt" },
+ ]},
+]
+logo = "/img/znak-sovf.png"
+
+# Add links to favicon, you can use https://realfavicongenerator.net/ to generate favicon for your site
+[extra.favicon]
+favicon = "/webicons/logo32.png"
+webmanifest = "/webicons/site.webmanifest"

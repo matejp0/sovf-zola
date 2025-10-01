@@ -1,0 +1,18 @@
+<figure  class="fig-{% if float %}{{ float }}{% endif %}">
+{% for asset in page.assets -%}
+	{%- if asset is containing(source) -%}
+		{% set src = get_url(path=asset) %}
+		{%- if height -%}
+			{% set image = resize_image(path=asset, height=height, op="fit_height") %}
+			{% set src = image.url %}
+		{%- endif %}
+
+		{%- if not caption -%}
+			{% set caption =  asset | split(pat="/") | last | split(pat=".") | first %}
+		{%- endif %}
+		<a title="{{ caption }}" href="{{ get_url(path=asset)}}"><img class="img-rounded" src="{{ src }}" alt="{{ caption }}"></a>
+	<figcaption>{{ caption | safe }}</figcaption>
+		{% break %}
+	{%- endif %}
+{%- endfor %}
+</figure> 
