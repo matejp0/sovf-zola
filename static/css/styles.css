@@ -134,3 +134,26 @@ nav a:hover, a.no-underline:hover {
 .footnote-reference a::after {
 	content: "]";
 }
+
+.tooltip i {
+	cursor: pointer;
+	font-size: 1.2em;
+}
+.tooltip {
+	display: inline-block;
+}
+.tooltip-text {
+  visibility: hidden; /* Hidden by default */
+  width: 300px;
+  margin-left: -150px; /* Use half of the width (130/2 = 65), to center the tooltip */
+  background-color: #4a4a4aee;
+	color: #ffffff;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1; /* Ensure tooltip is displayed above content */
+}
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}

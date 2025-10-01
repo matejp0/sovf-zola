@@ -12,7 +12,7 @@
 			{% set caption =  asset | split(pat="/") | last | split(pat=".") | first %}
 		{%- endif %}
 		<a title="{{ caption }}" data-lightbox="mygallery" data-title="{{ caption }}" href="{{ get_url(path=asset)}}"><img class="img-rounded" src="{{ src }}" alt="{{ caption }}"></a>
-	<figcaption>{{ caption | safe }}</figcaption>
+		<figcaption><div class="tooltip"><i class="fas fa-info-circle"></i><span class="tooltip-text">{{ caption | safe }}</span></div></figcaption>
 		{% break %}
 	{%- endif %}
 {%- endfor %}
